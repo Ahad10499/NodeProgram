@@ -1,0 +1,25 @@
+{
+  "name": "nodeprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahad10499/NodeProgram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahad10499/NodeProgram/issues"
+  },
+  "homepage": "https://github.com/Ahad10499/NodeProgram#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
