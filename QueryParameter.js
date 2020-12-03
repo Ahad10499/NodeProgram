@@ -15,6 +15,8 @@ app.get("/user", function(req, res){
 	
 	console.log("Name :", name) 
 	console.log("Age :", age) 
+	res.send("welcome " + name + " and your age is"+ age);
+
 }) 
 
 app.listen(PORT, function(error){ 
