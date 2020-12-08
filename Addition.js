@@ -3,6 +3,7 @@ const bodyParser = require("body-parser")
 
 // New app using express module 
 const app = express(); 
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ 
 	extended:false
 })); 
@@ -12,11 +13,12 @@ res.sendFile(__dirname + "/Addition.html");
 }); 
 
 app.post("/Addition", function(req, res) { 
+
 var num1 = Number(req.body.num1); 
 var num2 = Number(req.body.num2); 
 	
 var result = num1 + num2 ; 
-	
+
 res.send("Addition : " + result); 
 }); 
 

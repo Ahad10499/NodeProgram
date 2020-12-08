@@ -1,0 +1,32 @@
+<html>
+<head>
+     
+</head>
+<body>
+  
+  <form action="" name="myForms" onsubmit=" return Data();" method="POST">  
+  First Name: <input type="text" name="first_name">  <br>  
+  Last Name: <input type="text" name="last_name">  
+  <input type="submit" value="Submit">  
+  <span id = "status"></span>
+  </form>  
+  <script> 
+    function ajax(){ 
+      var a = document.forms["myForm"]["first_name"].value; 
+      var b = document.forms["myForm"]["last_name"].value; 
+        var add = 
+      xmlhttp = new XMLHttpRequest(); 
+      xmlhttp.onreadystatechange=function(){ 
+        if(xmlhttp.readyState==4 && xmlhttp.status==200){ 
+          document.getElementById("status").innerHTML=xmlhttp.responseText; 
+        }; 
+      }; 
+      xmlhttp.open("POST","/myajax",true); 
+      xmlhttp.send(add); 
+      return false; 
+    } 
+  </script> 
+  
+</body>
+
+</html>

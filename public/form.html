@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr"> 
+  
+<head> 
+    <meta charset="utf-8"> 
+    <title>Calculator</title> 
+</head> 
+  
+<body> 
+    <h1>Simple Calculator.</h1> 
+    <form name="myForm" action="" onsubmit="return ajax();" method="POST"> 
+        <input type="text" name="num1" id="no1"
+            placeholder="First Number"> 
+        <input type="text" name="num2" id="no2"
+            placeholder="Second Number"> =
+            <span id="result"></span> 
+        <br> 
+              
+        <button type="submit"  name="submit"> calculator </button> 
+       
+    </form> 
+ 
+<script> 
+    function ajax(){ 
+      var a = document.forms["myForm"]["num1"].value; 
+      var b = document.forms["myForm"]["num2"].value; 
+        var add =parseInt(a) + parseInt(b);
+        console.log(add);
+        
+
+      xmlhttp = new XMLHttpRequest(); 
+
+      xmlhttp.onreadystatechange=function(){ 
+        if(xmlhttp.readyState==4 && xmlhttp.status==200){ 
+          document.getElementById("result").innerHTML=xmlhttp.responseText; 
+        }; 
+      }; 
+      xmlhttp.open("POST","/myajax",true); 
+      xmlhttp.send(a , b);
+     
+      return false; 
+    } 
+  </script> 
+  </body>    
+</html> 
